@@ -12,6 +12,10 @@ RES_SECOND = 's'
 RES_MICROSECOND = 'ms'
 
 
+class DivDateResolutionException(ValueError):
+    pass
+
+
 class DivDate(datetime.date):
     def __new__(cls, year=1, month=1, day=1, resolution=RES_NOTHING):
         return super(DivDate, cls).__new__(cls, year, month, day)
@@ -30,7 +34,7 @@ class DivDate(datetime.date):
         elif self._resolution == RES_DAY:
             return DivDateTime(self.year, self.month, self.day, field, resolution=RES_HOUR)
         else:
-            raise ValueError('Invalid resolution')
+            raise DivDateResolutionException('Invalid resolution')
 
 
 class DivDateTime(datetime.datetime):
@@ -52,4 +56,4 @@ class DivDateTime(datetime.datetime):
             return DivDateTime(self.year, self.month, self.day, self.hour, self.minute, self.second, field,
                                resolution=RES_MICROSECOND)
         else:
-            raise ValueError('End of resolution')
+            raise DivDateResolutionException('End of resolution')
