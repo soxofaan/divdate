@@ -1,3 +1,3 @@
-from divdate import DivDate
+from .divdate import DivDate
 
 ddate = DivDate()
