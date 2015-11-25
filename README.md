@@ -3,6 +3,11 @@
 
 divdate is a Python module to build date and datetime object using the division operator.
 
+## Installation
+
+```
+pip install divdate
+```
 
 ## Usage example
 
