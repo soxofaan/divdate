@@ -1,4 +1,6 @@
 
+[![Build Status](https://travis-ci.org/soxofaan/divdate.svg?branch=master)](https://travis-ci.org/soxofaan/divdate)
+
 # divdate: division based date/time building for Python
 
 divdate is a Python module to build date and datetime object using the division operator.
