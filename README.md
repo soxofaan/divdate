@@ -1,5 +1,4 @@
 
-[![Build Status](https://travis-ci.org/soxofaan/divdate.svg?branch=master)](https://travis-ci.org/soxofaan/divdate)
 
 # divdate: division based date/time building for Python
 
